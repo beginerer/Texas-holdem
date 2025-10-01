@@ -6,6 +6,8 @@ import static java.util.Objects.requireNonNull;
 
 public class Cards {
 
+    public static final Cards EMPTY = new Cards(new ArrayDeque<>(0));
+
     private final Deque<Card> cards;
 
 

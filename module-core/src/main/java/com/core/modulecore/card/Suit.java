@@ -7,6 +7,7 @@ public enum Suit {
     SPADES("♠","s"),
     HIDDEN("XX","XX");
 
+
     private final String symbol;
     private final String value;
 
