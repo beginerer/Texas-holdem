@@ -4,6 +4,7 @@ import java.util.*;
 
 import static java.util.Objects.requireNonNull;
 
+
 public class Cards {
 
     public static final Cards EMPTY = new Cards(new ArrayDeque<>(0));
@@ -51,5 +52,10 @@ public class Cards {
         return cards.isEmpty();
     }
 
-
+    @Override
+    public String toString() {
+        return "Cards{" +
+                "cards=" + cards +
+                '}';
+    }
 }

@@ -3,8 +3,12 @@ package com.core.modulecore.player;
 
 import com.core.modulecore.card.Cards;
 import com.core.modulecore.game.GameEvent;
+import lombok.Getter;
+
+import java.util.Objects;
 
 
+@Getter
 public class Player {
 
     private long playerId;
@@ -64,7 +68,20 @@ public class Player {
                     formatted(playerGameState));
 
         if(playerState != PlayerState.IN_GAME)
-            throw new InvalidPlayerActionException("[ERROR} player is not in_game. current state=%s".formatted(playerState));
+            throw new InvalidPlayerActionException("[ERROR} player is not in_game. current state=%s".
+                    formatted(playerState));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return playerId == player.playerId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(playerId);
     }
 
 

@@ -1,6 +1,7 @@
 package com.core.modulecore.card;
 
 public enum HandRank {
+
     ROYAL_FLUSH("Royal Flush"),
     STRAIGHT_FLUSH("Straight Flush"),
     FOUR_OF_A_KIND("Four of a Kind"),
@@ -14,13 +15,13 @@ public enum HandRank {
     INVALID("Invalid");
 
 
-    private String category;
+    private String description;
 
-    HandRank(String category) {
-        this.category = category;
+    HandRank(String description) {
+        this.description = description;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDescription() {
+        return description;
     }
 }

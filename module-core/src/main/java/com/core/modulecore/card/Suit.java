@@ -11,7 +11,8 @@ public enum Suit {
     private final String symbol;
     private final String value;
 
-    public static Suit[] suits = {HEARTS,DIAMONDS,CLUBS,SPADES};
+    public static Suit[] suits = {HEARTS, DIAMONDS, CLUBS, SPADES};
+
 
     Suit(String symbol, String value) {
         this.symbol = symbol;

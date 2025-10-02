@@ -15,15 +15,29 @@ public class Card {
 
     private boolean hidden;
 
-    private boolean highlight;
+    private boolean highlighted;
 
 
 
     public Card(Suit suit, Rank rank) {
-        this.suit = suit;
-        this.rank = rank;
+        this(suit, rank, false, false);
     }
 
+    public Card(Suit suit, Rank rank, boolean hidden, boolean highlighted) {
+        this.suit = suit;
+        this.rank = rank;
+        this.hidden = hidden;
+        this.highlighted = highlighted;
+    }
+
+
+    public void show() {
+        this.hidden = false;
+    }
+
+    public void highlight() {
+        this.highlighted = true;
+    }
 
 
     @Override
@@ -36,5 +50,13 @@ public class Card {
     @Override
     public int hashCode() {
         return Objects.hash(suit, rank);
+    }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "suit=" + suit +
+                ", rank=" + rank +
+                '}';
     }
 }

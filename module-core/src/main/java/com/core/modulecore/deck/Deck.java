@@ -11,6 +11,7 @@ import java.util.Deque;
 import java.util.List;
 
 
+
 public class Deck {
 
     private Cards cards;
@@ -33,8 +34,7 @@ public class Deck {
     }
 
     public Cards drawCards(int count) {
-
-        Cards drawn= cards.pickCards(count);
+        Cards drawn = cards.pickCards(count);
         sequence += count;
         return drawn;
     }
@@ -62,4 +62,5 @@ public class Deck {
 
         return shuffleStrategy.shuffle(source, rng);
     }
+
 }
